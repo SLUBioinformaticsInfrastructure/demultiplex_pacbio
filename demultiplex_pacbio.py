@@ -17,16 +17,18 @@ def usage():
     print("""
         USAGE:
         
-        python demultiplex_pacbio.py <file_to_demultiplex>
+        python demultiplex_pacbio.py <file_to_demultiplex> <folder_with_mapping_files>
     """)
     
-if len(sys.argv) != 2:
+if len(sys.argv) != 3:
     usage()
     sys.exit("Not enough arguments provided. Exit.\n")
+    
 file_to_demultiplex = sys.argv[1]
+folder_with_mapping_files = sys.argv[2]
 
 D1 = {}
-D1_files = glob.glob("tag_sample_sorted/Pool1*")
+D1_files = glob.glob("{folder_with_mapping_files}/*.txt".format(folder_with_mapping_files=folder_with_mapping_files))
 for f in D1_files:
     fhandle = open(f, 'r')
     for l in fhandle:
