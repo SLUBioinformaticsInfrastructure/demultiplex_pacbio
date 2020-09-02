@@ -60,7 +60,7 @@ The `example_to_demultiplex.stats` file reports demultiplexing statistics (_ie_,
 
 ## Getting troubles?
 
-Please open an issue here: https://github.com/domenico-simone/demultiplex_pacbio/issues (preferred) or contact me at `domenico.simone@slu.se`. Opening an issue is the preferred way since other people can more easily benefit from it!
+Please open an issue here: https://github.com/domenico-simone/demultiplex_pacbio/issues (preferred) or contact me at `domenico.simone@slu.se`. Opening an issue is the preferred way since other people can more easily benefit from it, although you need a GitHub account to do it!
 
 **Happy demultiplexing!**
  
