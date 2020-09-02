@@ -21,7 +21,7 @@ pip install biopython
 In order to demultiplex your datasets you will need to arrange input files like this:
 
 - **the fastq file to be demultiplexed** has to be in the root folder of the git repo;
-- **read mapping files** (_ie_, files with read IDs one per line) have to be in a subfolder of your choice **with a *.txt extension**.
+- **read mapping files** (_ie_, files with read IDs one per line) have to be in a subfolder of your choice **with a \*.txt extension**.
 
 The demultiplexing script can be run as follows:
 
