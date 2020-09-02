@@ -1,5 +1,5 @@
 from Bio import SeqIO
-import glob, os
+import glob, os, sys
 
 # For each fastq:
 # 
@@ -13,6 +13,18 @@ def qual2ascii(list_of_phred):
         ascii += chr(i+33)
     return ascii
 
+def usage():
+    print("""
+        USAGE:
+        
+        python demultiplex_pacbio.py <file_to_demultiplex>
+    """)
+    
+if len(sys.argv) != 2:
+    usage()
+    sys.exit("Not enough arguments provided. Exit.\n")
+file_to_demultiplex = sys.argv[1]
+
 D1 = {}
 D1_files = glob.glob("tag_sample_sorted/Pool1*")
 for f in D1_files:
@@ -21,7 +33,7 @@ for f in D1_files:
         l = l.strip()
         D1[l] = f.replace(".txt", ".fastq")
 
-fastq = SeqIO.parse("ps_034_001.ccs.fastq", 'fastq')
+fastq = SeqIO.parse(file_to_demultiplex, 'fastq')
 tag = 0
 non_tag = 0
 for entry in fastq:
