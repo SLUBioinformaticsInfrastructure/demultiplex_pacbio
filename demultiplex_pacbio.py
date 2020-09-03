@@ -72,27 +72,6 @@ for entry in fastq:
     else:
         #print("{} not linked to any tag")
         non_tag += 1
-    # try:
-    #     outfile = D1[entry.id]
-    #     if os.path.isfile(outfile):
-    #         o = open(outfile, 'a')
-    #         # write sequence
-    #         _ = o.write("@{seqid}\n{seq}\n+\n{qual}\n".format(seqid = entry.id, 
-    #                                                       seq = str(entry.seq),
-    #                                                       qual = qual2ascii(entry._per_letter_annotations['phred_quality'])))
-    #         o.close()
-    #     else:
-    #         o = open(outfile, 'w')
-    #         # write sequence
-    #         _ = o.write("@{seqid}\n{seq}\n+\n{qual}\n".format(seqid = entry.id, 
-    #                                                       seq = str(entry.seq),
-    #                                                       qual = qual2ascii(entry._per_letter_annotations['phred_quality'])))
-    #         o.close()
-    #     stats_dict[D1[entry.id].replace(".fastq", "")] += 1
-    #     tag += 1
-    # except:
-    #     #print("{} not linked to any tag")
-    #     non_tag += 1
 
 stats_file = open(file_to_demultiplex.replace(".fastq", ".stats"), 'w')
 for read_mapping_file in stats_dict:
