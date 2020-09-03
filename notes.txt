@@ -1,2 +1,7 @@
 12, 13, 15 --> linked
 16         --> non-linked
+
+grep -A 3 -f tag_sample_sorted/Pool1_fire-gITS7_tag_12_ITS4a_tag_12.txt ps_034_001.ccs.fastq | grep -v ^--$ > example_to_demultiplex.fastq
+grep -A 3 -f tag_sample_sorted/Pool1_fire-gITS7_tag_13_ITS4a_tag_13.txt ps_034_001.ccs.fastq | grep -v ^--$ >> example_to_demultiplex.fastq
+grep -A 3 -f tag_sample_sorted/Pool1_fire-gITS7_tag_15_ITS4a_tag_15.txt ps_034_001.ccs.fastq | grep -v ^--$ >> example_to_demultiplex.fastq 
+grep -A 3 -f ../demultiplex_pacbio_backup/tag_sample_sorted/Pool1_fire-gITS7_tag_16_ITS4a_tag_16.txt ps_034_001.ccs.fastq | grep -v ^--$ >> example_to_demultiplex.fastq
