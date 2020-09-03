@@ -56,7 +56,7 @@ tag_sample_sorted/
 └── example_to_demultiplex.unassigned
 ```
 
-The `example_to_demultiplex.stats` file reports demultiplexing statistics (_ie_, how many reads were assigned to each sample). The `example_to_demultiplex.unassigned` file reports reads from the input file which were not found in any read mapping file.
+The `example_to_demultiplex.stats` file reports demultiplexing statistics (_ie_, how many reads were assigned to each sample). The `example_to_demultiplex.no_tag.fastq` file reports reads from the input file which were not found in any read mapping file.
 
 ## Getting troubles?
 
