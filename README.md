@@ -4,13 +4,17 @@ This repository is developed and maintained by Domenico Simone (domenico.simone@
 
 ## Getting the repository
 
+The best way to use this repo is to clone it with **git**, which should be already installed on Unix systems (Linux, MacOS)
+
 ```bash
 git clone https://github.com/domenico-simone/demultiplex_pacbio.git
 ```
 
+Otherwise, you can download and unzip this repo by clicking on the "Code" green button on the top right of this page.
+
 ## Prerequisites
 
-The demultiplexing script needs Python to be run (tested with Python > 3.4) and the Biopython library. If you don't have it, the easiest way to install it is with `pip`:
+The demultiplexing script needs **Python** to be run (tested with Python > 3.4) and the **Biopython** library. If you don't have it, the easiest way to install it is with `pip` (Python > 3.4):
 
 ```bash
 pip install biopython
@@ -56,7 +60,7 @@ tag_sample_sorted/
 └── example_to_demultiplex.unassigned
 ```
 
-The `example_to_demultiplex.stats` file reports demultiplexing statistics (_ie_, how many reads were assigned to each sample). The `example_to_demultiplex.no_tag.fastq` file reports reads from the input file which were not found in any read mapping file.
+The `example_to_demultiplex.stats` file reports demultiplexing statistics (_ie_, how many reads were expected from each sample and how many were assigned to each sample). The `example_to_demultiplex.no_tag.fastq` file reports reads from the input file which were not found in any read mapping file.
 
 ## Getting troubles?
 
